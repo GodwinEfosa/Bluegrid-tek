@@ -13,7 +13,7 @@
 <meta property="og:image" content="https://bluegrid-tek.vercel.app/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Blue Grid | Premium Web Development">
-<meta name="twitter:description" content="We build websites that that fetch you clients. Fast, professional, and built to convert.">
+<meta name="twitter:description" content="We build websites that fetch you clients. Fast, professional, and built to convert.">
 <meta name="twitter:image" content="https://bluegrid-tek.vercel.app/og-image.png">
 <link rel="canonical" href="https://bluegrid-tek.vercel.app/">
 <meta charset="UTF-8">
@@ -54,39 +54,46 @@ img { max-width: 100%; display: block; }
 .theme-toggle:hover { background: var(--bg-surface); }
 .hamburger { display: none; font-size: 1.5rem; cursor: pointer; }
 .close-menu { display: none; }
+
+/* ============================================ */
+/* MOBILE MENU - FIXED */
+/* ============================================ */
 @media (max-width: 768px) {
 .nav-links { 
-    position: fixed; 
-    top: 0; 
-    right: -100%;  /* ← HIDDEN BY DEFAULT */
-    width: 70%; 
-    height: 100vh; 
-    background: var(--bg-body); 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    transition: 0.4s ease; 
+    position: fixed !important; 
+    top: 0 !important; 
+    right: -100% !important;  /* ← HIDDEN BY DEFAULT */
+    width: 70% !important; 
+    height: 100vh !important; 
+    background: var(--bg-body) !important; 
+    flex-direction: column !important; 
+    justify-content: center !important; 
+    align-items: center !important; 
+    transition: right 0.4s ease !important; 
     border-left: 1px solid var(--border-color);
-    z-index: 1002;  /* ← ADDED */
+    z-index: 1002 !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 .nav-links a { font-size: 1.5em; padding: 15px 0; }
-.nav-links.active { right: 0; }  /* ← SHOWS WHEN ACTIVE */
-.hamburger { display: block; z-index: 1003; }  /* ← ADDED z-index */
+.nav-links.active { right: 0 !important; }  /* ← SHOWS WHEN ACTIVE */
+.hamburger { display: block !important; z-index: 1003 !important; }
 .close-menu { 
-    position: absolute; 
-    top: 25px; 
-    right: 25px; 
-    background: none; 
-    border: none; 
-    color: var(--text-main); 
-    font-size: 1.5rem; 
-    cursor: pointer; 
-    padding: 5px; 
-    z-index: 1003; 
-    display: none;  /* ← CHANGED FROM block TO none */
+    position: absolute !important; 
+    top: 25px !important; 
+    right: 25px !important; 
+    background: none !important; 
+    border: none !important; 
+    color: var(--text-main) !important; 
+    font-size: 1.5rem !important; 
+    cursor: pointer !important; 
+    padding: 5px !important; 
+    z-index: 1003 !important; 
+    display: none !important;  /* ← HIDDEN BY DEFAULT */
 }
-.nav-links.active .close-menu { display: block; }  /* ← SHOW ONLY WHEN MENU OPEN */
+.nav-links.active .close-menu { display: block !important; }  /* ← SHOW ONLY WHEN MENU OPEN */
 }
+
 .hero { padding: 120px 0 80px; position: relative; overflow: hidden; background-image: radial-gradient(var(--border-color) 1px, transparent 1px); background-size: 40px 40px; }
 .hero-content { max-width: 800px; position: relative; z-index: 2; }
 .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 20px; color: var(--color-navy); opacity: 0; animation: fadeUp 0.8s forwards 0.2s; }
